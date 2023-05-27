@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.coewithgolap.mlhub">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="whateverString"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/security"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory"
+        tools:targetApi="n">
+        <activity
+            android:name=".mainPageActivity.SendPasswordActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mainPageActivity.ForgotPasswordActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.mytensor.TensorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bottomActivities.detectActivities.AppleActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".mainPageActivity.PostDetailsActivity" />
+        <activity
+            android:name=".mainPageActivity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mainPageActivity.RegistrationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SliderActivities.CultureActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SliderActivities.DetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bottomActivities.CropsDetailsActivity"
+            android:theme="@style/DetailsTheme" />
+        <activity
+            android:name=".bottomActivities.DetectActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".bottomActivities.CommunityActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mainPageActivity.AboutDeveloper"
+            android:theme="@style/MainPagesTheme" />
+        <activity
+            android:name=".mainPageActivity.AboutApp"
+            android:theme="@style/MainPagesTheme" />
+        <activity
+            android:name=".mainPageActivity.HowToDetect"
+            android:theme="@style/MainPagesTheme" />
+        <activity
+            android:name=".mainPageActivity.AboutCorn"
+            android:theme="@style/MainPagesTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/MainTheme" />
+        <activity
+            android:name=".NorthernActivity"
+            android:theme="@style/RegLogTheme" />
+        <activity
+            android:name=".HealthyActivity"
+            android:theme="@style/RegLogTheme" />
+        <activity
+            android:name=".CercosporaActivity"
+            android:theme="@style/RegLogTheme" />
+        <activity
+            android:name=".PestsActivity"
+            android:theme="@style/PestsTheme" />
+        <activity
+            android:name=".DeshActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FirstActivity"
+            android:theme="@style/RegLogTheme" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

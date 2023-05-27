@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/corn_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_overlay1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt1"
+            android:text="@string/hi"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="30dp"/>
+
+        <ImageView
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:src="@drawable/icons_corn_64"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt2"
+            android:layout_below="@id/txt1"
+            android:text="@string/choose"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"/>
+
+        <Button
+            android:id="@+id/aboutCorn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_main_ripple"
+            android:text="@string/aboutCorn"
+            android:fontFamily="@font/poppins_bold"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:onClick="aboutCorn"
+            android:layout_below="@id/txt2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="90dp"
+            android:drawableStart="@drawable/corn_icon"
+            android:paddingStart="20dp"
+            android:drawablePadding="-130dp"
+            android:textColor="@color/white"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/howTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_main_ripple"
+            android:text="@string/help"
+            android:fontFamily="@font/poppins_bold"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:onClick="howToDetect"
+            android:layout_below="@id/aboutCorn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/detect_icon"
+            android:paddingStart="20dp"
+            android:drawablePadding="-35dp"
+            android:textColor="@color/white"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/aboutApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_main_ripple"
+            android:text="@string/aboutApp"
+            android:fontFamily="@font/poppins_bold"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:onClick="aboutApp"
+            android:layout_below="@id/howTo"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/about_app_icon"
+            android:paddingStart="20dp"
+            android:drawablePadding="-135dp"
+            android:textColor="@color/white"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/aboutDeveloper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_main_ripple"
+            android:text="@string/aboutDev"
+            android:fontFamily="@font/poppins_bold"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:onClick="aboutDeveloper"
+            android:layout_below="@id/aboutApp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/person_icon"
+            android:paddingStart="20dp"
+            android:drawablePadding="-80dp"
+            android:textColor="@color/white"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/detectTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/detectDiseasebtn"
+            android:layout_below="@+id/aboutDeveloper"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="66dp"
+            android:layout_marginBottom="8dp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/detect_disease"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/detectDiseasebtn"
+            android:onClick="detectDiseaseBtnClick"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:text="@string/disease_detector"
+            android:textSize="19sp"
+            android:textColor="@color/green1"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/butto_detector_ripple"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

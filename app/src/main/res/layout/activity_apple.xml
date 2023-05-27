@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bottomActivities.detectActivities.AppleActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/green_detection"
+        android:elevation="8dp"
+        android:id="@+id/rel1">
+
+        <RelativeLayout
+            android:background="@drawable/white_detection"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:elevation="4dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/mGalleryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/open_gallery"
+                    android:background="@drawable/add_post_btn_ripple"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.04"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/add_gallry_detect"
+                    android:drawablePadding="8dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+                <Button
+                    android:id="@+id/mCameraButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="@string/start_camera"
+                    android:background="@drawable/add_post_btn_ripple"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.04"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/add_image_detect"
+                    android:drawablePadding="8dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginTop="6dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/rel1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:id="@+id/mPhotoImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/corn_image"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/mDetectButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:alpha="0"
+            android:background="@drawable/button_login_riple"
+            android:fontFamily="@font/poppins_bold"
+            android:letterSpacing="0.1"
+            android:includeFontPadding="false"
+            android:text="@string/buttonDiagnose"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mResultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mShowPrecaution"
+            android:layout_below="@id/mDetectButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:alpha="0"
+            android:fontFamily="@font/poppins_regular"
+            android:padding="4dp"
+            android:text="@string/resultTxt"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/mShowPrecaution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="30dp"
+            android:alpha="0"
+            android:background="@drawable/button_detect_riple"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.07"
+            android:onClick="precaution"
+            android:padding="5dp"
+            android:text="@string/showPrecautions"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/demoTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:alpha="1"
+            android:fontFamily="@font/poppins_regular"
+            android:letterSpacing="0.04"
+            android:text="@string/detect_txt"
+            android:textColor="@color/black_overlay1"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ki1"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:weightSum="2"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/view_one"/>-->
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/view_two" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/mCameraButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="44dp"-->
+<!--        android:layout_marginTop="14dp"-->
+<!--        android:background="@color/green1"-->
+<!--        style="@style/Widget.AppCompat.Button.Borderless"-->
+<!--        android:fontFamily="@font/poppins_medium"-->
+<!--        android:padding="5dp"-->
+<!--        android:text="@string/start_camera"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="15sp"-->
+<!--        android:elevation="0dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/mGalleryButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="50dp"-->
+<!--        android:layout_marginTop="14dp"-->
+<!--        android:background="@color/white"-->
+<!--        style="@style/Widget.AppCompat.Button.Borderless"-->
+<!--        android:fontFamily="@font/poppins_medium"-->
+<!--        android:padding="5dp"-->
+<!--        android:text="@string/open_gallery"-->
+<!--        android:textColor="@color/green1"-->
+<!--        android:textSize="15sp"-->
+<!--        android:elevation="0dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+</RelativeLayout>
