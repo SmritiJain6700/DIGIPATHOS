@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/white_item_card_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:elevation="4dp">
+
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today weather"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="14sp"
+            android:letterSpacing="0.03"
+            android:layout_marginStart="16dp"
+            android:includeFontPadding="false"/>
+
+        <RelativeLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/Temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="36sp"
+                android:text="@string/weather_temp_default"
+                android:layout_marginStart="16dp"
+                android:includeFontPadding="false"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_toEndOf="@id/Temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="36sp"
+                android:text="°C"
+                android:layout_marginStart="16dp"
+                android:includeFontPadding="false"
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:id="@+id/weatherIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/weather_icon_default"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="40sp"
+                android:layout_marginEnd="16dp"
+                android:includeFontPadding="false"
+                android:textColor="@android:color/black" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear1"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:letterSpacing="0.03"
+        android:text="@string/weather_desc_default"
+        android:includeFontPadding="false" />
+</RelativeLayout>
