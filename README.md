@@ -6,7 +6,7 @@ Welcome to Digipathos! This documentation will guide you through the steps to se
 
 **Step 1: Clone the Repository**
 
-1. Visit the [GitHub repository](https://github.com/username/repo) for Digipathos.
+1. Visit the [GitHub repository](https://github.com/SmritiJain6700/DIGIPATHOS) for Digipathos.
 2. Click on the "Clone" or "Download" button and copy the repository's URL.
 3. Open your terminal or command prompt and navigate to the desired directory.
 4. Run the following command to clone the repository:
